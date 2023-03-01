@@ -5,6 +5,6 @@
 
 <h4>Commands:</h4>
 <ul>
-	<li><b>npm install</b> - to install all packages</li>
+	<li><b style={color:'#fffd00'}>npm install</b> - to install all packages</li>
 	<li><b>npm run dev</b>- to run the project (a link to the project will appear in the terminal)</li>
 </ul>
