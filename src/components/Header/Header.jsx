@@ -2,14 +2,14 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="a1">
-      <div>
-        <h1 className="b3">Ruslan Bogdanov ✌</h1>
+    <header className="header">
+      <div className="header_left">
+        <h1 className="header_name">Ruslan Bogdanov ✌</h1>
       </div>
-      <div>
-        <div className="b2"></div>
+      <div className="header_right">
+        <div className="header_img"></div>
       </div>
-      <div className="b4">Inexperienced front-end developer</div>
+      <div className="header_bottom">Inexperienced front-end developer</div>
     </header>
   );
 };
