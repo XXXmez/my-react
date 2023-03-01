@@ -1,0 +1,12 @@
+.button-page {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.buttons {
+  display: flex;
+  gap: 5px;
+}

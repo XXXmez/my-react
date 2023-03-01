@@ -1,0 +1,18 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-element {
+  margin-top: 35px;
+}
+.content-link {
+  border: 6px double gray;
+  border-radius: 18px;
+  padding: 2px 50px;
+  text-decoration: none;
+  color: white;
+}
+.content-title {
+  font-size: 35px;
+}

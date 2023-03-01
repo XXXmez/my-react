@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.css";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import SliderPage from "./pages/SliderPage/SliderPage";
+import HiddenTextPage from "./pages/HiddenTextPage/HiddenTextPage";
+import AccordionPage from "./pages/AccordionPage/AccordionPage";
+import TranslatorV1Page from "./pages/Translator_v1_Page/Translator_v1_Page";
+import TranslatorV2Page from "./pages/Translator_v2_Page/Translator_v2_Page";
+import PaginationPage from "./pages/PaginationPage/PaginationPage";
+import TodoPage from "./pages/TodoPage/TodoPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/slider" element={<SliderPage />} />
+          <Route path="/hidden_text" element={<HiddenTextPage />} />
+          <Route path="/accordion" element={<AccordionPage />} />
+          <Route path="/translator_v1" element={<TranslatorV1Page />} />
+          <Route path="/translator_v2" element={<TranslatorV2Page />} />
+          <Route path="/pagination" element={<PaginationPage />} />
+          <Route path="/todo" element={<TodoPage />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
