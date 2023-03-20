@@ -6,6 +6,7 @@ const Card = ({
   descr = "",
   cb = "",
   url = "",
+  link = "",
   favorites = false,
   lastWork = false,
 }) => {
@@ -22,9 +23,16 @@ const Card = ({
             <span className="card-icon-span lastwork">Last work</span>
           </div>
         )}
-        <Link to={url} className="card-button">
-          ➜
-        </Link>
+        {url && (
+          <Link to={url} className="card-button">
+            ➜
+          </Link>
+        )}
+        {link && (
+          <a href={link} target="_blank" className="card-button">
+            ➜
+          </a>
+        )}
       </div>
       <div className="card-title">
         <h3 className="card-title-h3">{title}</h3>

@@ -1,7 +1,4 @@
-import React from "react";
-import Card from "../Card/Card";
-
-const arrObj = [
+const dataComponents = [
   {
     id: "1",
     name: "Slider",
@@ -59,33 +56,15 @@ const arrObj = [
   },
 ];
 
-const newArr = [...arrObj]
-  .reverse()
-  .sort((el) => (el.favorites === true ? -1 : 1));
+const dataProject = [
+  {
+    id: "1",
+    name: "Countries",
+    description:
+      "Project information about countries, made on react and react router, database is taken from api",
+    link: "https://info-about-countries.netlify.app/",
+    favorites: true,
+  },
+];
 
-const Cards = ({ titleCards = "", cb = "" }) => {
-  const lastWork = (ind) => {
-    return String(newArr.length) === ind;
-  };
-
-  return (
-    <section className="cards">
-      <div className="cards-title">
-        <h2>{titleCards}</h2>
-      </div>
-      {newArr.map((el) => (
-        <Card
-          key={el.id}
-          title={el.name}
-          descr={el.description}
-          cb={cb}
-          url={el.url}
-          favorites={el.favorites}
-          lastWork={lastWork(el.id)}
-        />
-      ))}
-    </section>
-  );
-};
-
-export default Cards;
+export { dataComponents, dataProject };

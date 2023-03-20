@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import "./App.scss";
 
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import SliderPage from "./pages/SliderPage/SliderPage";
 import HiddenTextPage from "./pages/HiddenTextPage/HiddenTextPage";
@@ -13,6 +12,7 @@ import TranslatorV2Page from "./pages/Translator_v2_Page/Translator_v2_Page";
 import PaginationPage from "./pages/PaginationPage/PaginationPage";
 import TodoPage from "./pages/TodoPage/TodoPage";
 import AreaPage from "./pages/AreaPage/AreaPage";
+import MianPage from "./pages/MianPage/MianPage";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<MianPage />} />
           <Route path="/slider" element={<SliderPage />} />
           <Route path="/hidden_text" element={<HiddenTextPage />} />
           <Route path="/accordion" element={<AccordionPage />} />
